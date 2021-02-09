@@ -1,13 +1,13 @@
 import Header from "../components/Header";
-import LoginForm from "../components/LoginForm";
+import RegistrationForm from "../components/RegistrationForm";
 
-export const AuthPage = () => {
+export const RegisterPage = () => {
   
 
   return (
     <div className="container">
       <Header />
-      <LoginForm/>
+      <RegistrationForm/>
     </div>
   );
 };

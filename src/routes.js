@@ -4,6 +4,8 @@ import { AboutPage } from "./pages/AboutPage";
 import { AuthPage } from "./pages/AuthPage";
 import { ContactsPage } from "./pages/ContactsPage";
 import { MainPage } from "./pages/MainPage";
+import { RegisterPage } from "./pages/RegisterPage";
+import { StorePage } from "./pages/StorePage";
 
 
 export const useRoutes = (isAuthenticated) => {
@@ -31,6 +33,14 @@ export const useRoutes = (isAuthenticated) => {
         <Switch>
             <Route path="/" exact>
                 <MainPage/>
+            </Route>
+
+            <Route path="/register" exact>
+                <RegisterPage/>
+            </Route>
+
+            <Route path="/store" exact>
+                <StorePage/>
             </Route>
 
             <Route path="/auth" exact>

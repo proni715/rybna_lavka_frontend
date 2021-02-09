@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import { getCookieFromBrowser } from '../utils/cookie'
+//import { getCookieFromBrowser } from '../utils/cookie'
 
 
 export const MainPage = () =>{
