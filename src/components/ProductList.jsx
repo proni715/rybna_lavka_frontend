@@ -5,6 +5,7 @@ import React, { Component } from "react";
 // import Button from "@material-ui/core/Button";
 // import Typography from "@material-ui/core/Typography";
 import axios from "axios";
+import ProductCard from './ProductCard'
 import "./ProductList.css";
 
 class ProductList extends Component {
@@ -18,7 +19,7 @@ class ProductList extends Component {
 
   async componentDidMount() {
     await axios
-      .get("http://localhost:9000/products")
+      .get("https://rybna-lavka-api.herokuapp.com/products")
       .then((response) => {
         console.log(response);
         this.setState({ products: response.data.rows });
@@ -31,7 +32,8 @@ class ProductList extends Component {
   render() {
     const { products } = this.state;
     return (
-      <div>
+      <div className='products-container'>
+              <div className="products-grid">
         {products.map(
           //   product => {
           //     <div key={product.id} className="card">
@@ -45,23 +47,7 @@ class ProductList extends Component {
           //     </div>;
           //   }
           (product) => (
-            <div className="row">
-              <div className="col s12 m7">
-                <div className="card">
-                  <div className="card-image">
-                    <img src="../../rybka.jpg" alt="Риба" />
-                    <span className="card-title">{product.title}</span>
-                  </div>
-                  <div className="card-content">
-                    <p>
-                    </p>
-                  </div>
-                  <div className="card-action">
-                    <a href="#">This is a link</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProductCard product={product}/>
           )
           // ,
           // (product) => (
@@ -75,6 +61,7 @@ class ProductList extends Component {
           //   </div>
           // )
         )}
+      </div>
       </div>
     );
   }
