@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from '../components/Header'
+import Navbar from '../components/Navbar'
 
 export const ContactsPage = () =>{
     return(
-        <div className="container">
-            <Header/>
+        <div>
+            <Navbar/>
             <div>
                 <h1>Contacts Page</h1>
             </div>

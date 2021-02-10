@@ -1,11 +1,12 @@
 import React from 'react'
-import Header from '../components/Header'
+import Navbar from '../components/Navbar'
 //import routes from'../routes'
 
 export const AboutPage = () =>{
     return(
-        <div className="container">
-            <Header/>
+        <div>
+            <Navbar/>
+            <br/>
             <div>
                 <h1>About Page</h1>
             </div>

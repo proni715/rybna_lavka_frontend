@@ -5,7 +5,7 @@ import React, { Component } from "react";
 // import Button from "@material-ui/core/Button";
 // import Typography from "@material-ui/core/Typography";
 import axios from "axios";
-import './ProductList.css'
+import "./ProductList.css";
 
 class ProductList extends Component {
   constructor(props) {
@@ -45,13 +45,35 @@ class ProductList extends Component {
           //     </div>;
           //   }
           (product) => (
-            <div key={product.id} className="card">
-                <h4>{product.title}</h4>
-                <p className="price">{product.price} UAH</p>
-                <p>{product.units.count} {product.units.type}</p>
-                <button>Buy</button>
+            <div className="row">
+              <div className="col s12 m7">
+                <div className="card">
+                  <div className="card-image">
+                    <img src="../../rybka.jpg" alt="Риба" />
+                    <span className="card-title">{product.title}</span>
+                  </div>
+                  <div className="card-content">
+                    <p>
+                    </p>
+                  </div>
+                  <div className="card-action">
+                    <a href="#">This is a link</a>
+                  </div>
+                </div>
+              </div>
             </div>
           )
+          // ,
+          // (product) => (
+          //   <div key={product.id} className="card">
+          //     <h4>{product.title}</h4>
+          //     <p className="price">{product.price} UAH</p>
+          //     <p>
+          //       {product.units.count} {product.units.type}
+          //     </p>
+          //     <button>Buy</button>
+          //   </div>
+          // )
         )}
       </div>
     );

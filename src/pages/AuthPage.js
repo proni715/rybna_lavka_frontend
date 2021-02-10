@@ -1,12 +1,12 @@
-import Header from "../components/Header";
+import Navbar from '../components/Navbar'
 import LoginForm from "../components/LoginForm";
 
 export const AuthPage = () => {
   
 
   return (
-    <div className="container">
-      <Header />
+    <div>
+      <Navbar/>
       <LoginForm/>
     </div>
   );
