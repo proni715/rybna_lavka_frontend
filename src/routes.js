@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { AboutPage } from "./pages/AboutPage";
 import { AuthPage } from "./pages/AuthPage";
 import { ContactsPage } from "./pages/ContactsPage";
-import { MainPage } from "./pages/MainPage";
+import { MainPage } from "./pages/MainPage.jsx";
 import { RegisterPage } from "./pages/RegisterPage";
 import { StorePage } from "./pages/StorePage";
 
