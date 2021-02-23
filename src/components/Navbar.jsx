@@ -1,8 +1,12 @@
 import React from "react";
 import "./Navbar.css";
-
+import { getCookieFromBrowser, removeCookie } from "../utils/cookie";
 
 const Navbar = () => {
+  const isLoggedIn = getCookieFromBrowser("Authorization");
+  const delCookie = async () => {
+    removeCookie("Authorization");
+  };
   return (
     <div>
       <nav className="white" role="navigation">
@@ -21,9 +25,20 @@ const Navbar = () => {
             <li>
               <a href="/store">ТОВАРИ</a>
             </li>
+            {isLoggedIn ? (
+              <li>
+                <a href="/" onClick={delCookie}>
+                  ВИЙТИ
+                </a>
+              </li>
+            ) : (
+              <li>
+                <a href="/auth">УВІЙТИ</a>
+              </li>
+            )}
           </ul>
           <ul id="nav-mobile" className="side-nav">
-          <li>
+            <li>
               <a href="/">ГОЛОВНА</a>
             </li>
             <li>
@@ -35,9 +50,22 @@ const Navbar = () => {
             <li>
               <a href="/store">ТОВАРИ</a>
             </li>
+            {isLoggedIn ? (
+              <li>
+                <a href="/" onClick={delCookie}>
+                  ВИЙТИ
+                </a>
+              </li>
+            ) : (
+              <li>
+                <a href="/auth">УВІЙТИ</a>
+              </li>
+            )}
           </ul>
-          <a href="#" data-activates="nav-mobile" className="button-collapse">
-            <i className="material-icons">menu</i>
+          <a href="/" data-activates="nav-mobile" className="button-collapse">
+            <i id="menu-icon" className="material-icons">
+              menu
+            </i>
           </a>
         </div>
       </nav>

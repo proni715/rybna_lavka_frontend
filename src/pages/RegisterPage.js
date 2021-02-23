@@ -1,13 +1,15 @@
-import Navbar from '../components/Navbar'
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import RegistrationForm from "../components/RegistrationForm";
 
 export const RegisterPage = () => {
-  
-
   return (
-    <div>
-      <Navbar/>
-      <RegistrationForm/>
+    <div className="page">
+      <Navbar />
+      <div className="page-container">
+        <RegistrationForm />
+      </div>
+      <Footer/>
     </div>
   );
 };
