@@ -9,7 +9,7 @@ export const AboutPage = () =>{
             <Navbar/>
             <div id="about-back" className="page-container">
                 <div>
-                    <h1>About Page</h1>
+                    <h1 className="page-title">About Page</h1>
                 </div>        
             </div>
             <Footer/>

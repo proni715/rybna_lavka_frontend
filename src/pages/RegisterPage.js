@@ -7,7 +7,9 @@ export const RegisterPage = () => {
     <div className="page">
       <Navbar />
       <div className="page-container">
-        <RegistrationForm />
+        <div className="auth-container">
+          <RegistrationForm />
+        </div>
       </div>
       <Footer/>
     </div>

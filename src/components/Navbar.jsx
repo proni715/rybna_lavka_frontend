@@ -32,7 +32,8 @@ const Navbar = () => {
               </li>
             ) : (
               <li>
-                <a href="/auth">УВІЙТИ</a>
+
+                 <a href="/auth">УВІЙТИ</a>
               </li>
             )}
           </ul>

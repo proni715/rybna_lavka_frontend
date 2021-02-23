@@ -9,9 +9,10 @@ export const StorePage = () => {
       <Navbar />
       <div id="store-back" className="page-container">
          <div>
-              <div className="container">
-                <h1>Store</h1>
-                  <p className="center-align light">
+              <br/>
+              <div id="store-container" className="store-container container">
+                  <h1 className="page-title">Store</h1>
+                  <p className="center-align white-text">
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                           Nullam scelerisque id nunc nec volutpat. Etiam pellentesque
                           tristique arcu, non consequat magna fermentum ac. Cras ut

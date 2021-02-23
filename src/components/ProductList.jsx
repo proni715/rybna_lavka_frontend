@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
-import "./ProductList.css";
 
 class ProductList extends Component {
   constructor(props) {

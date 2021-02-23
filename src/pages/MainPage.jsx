@@ -9,15 +9,14 @@ export const MainPage = () => {
   return (
     <div className="page">
       <Navbar />
-      <div className="page-container">
+      <div id="main-page-container" className="page-container">
         <div id="index-banner" className="parallax-container">
           <div className="section no-pad-bot">
             <div className="container">
               <br />
               <br />
               <h1
-                id="mainName"
-                className="header center teal-text-brown lighten-1"
+                className="page-title"
               >
                 Rybna Lavka
               </h1>

@@ -7,7 +7,9 @@ export const AuthPage = () => {
     <div className="page">
       <Navbar />
       <div className="page-container">
-        <LoginForm />
+        <div className="auth-container">
+          <LoginForm />
+        </div>
       </div>
       <Footer />
     </div>
