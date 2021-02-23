@@ -29,7 +29,6 @@ p {
   font-size: 4em;
 }
 h1 {
-  font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-size: 3.2em;
   color: white;
@@ -39,7 +38,6 @@ h1 {
 }
 p {
   line-height: 2rem;
-  font-family: "Roboto Slab", serif;
 }
 #index-banner {
   width: 100%;
@@ -83,7 +81,17 @@ div p {
   font-size: xxx-large;
 }
 .page-container {
-  min-height: calc(100vh - 357px);
+  min-height: calc(100vh - 359px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#store-back{
+  background-image: url("../back.jpg");
+}
+#about-back{
+  background-image: url("../back1.jpg");
 }
 .page-footer {
   margin: 0;
@@ -162,12 +170,10 @@ form .form {
   margin-left: 46px;
   text-align: center;
   margin-bottom: 27px;
-  font-family: "Ubuntu", sans-serif;
 }
 
 #submit {
   cursor: pointer;
-
   border-radius: 5em;
   color: #fff;
   background: #615041;
@@ -176,7 +182,6 @@ form .form {
   padding-right: 40px;
   padding-bottom: 10px;
   padding-top: 10px;
-  font-family: "Ubuntu", sans-serif;
   margin-left: 35%;
   font-size: 13px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
@@ -201,21 +206,18 @@ form .form {
 }
 
 #paper {
-  margin: 10vh auto;
+  margin: 2vh 2vw;
   min-width: 20vw;
   max-width: 45vh;
   min-height: 20vh;
-  border-radius: 4px;
+  border-radius: 15px;
+  border: 10px solid white;
   box-shadow: 0 15px 35px rgba(50, 50, 90, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   transition: 0.6s ease;
   background: white;
   text-align: center;
 }
 
-#paper:hover {
-  box-shadow: 0 18px 35px rgba(50, 50, 90, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
-  transform: translateY(-1px);
-}
 
 #poster {
   border-radius: 4px 4px 0 0;
@@ -226,12 +228,11 @@ form .form {
 
 #paper h1 {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-shadow: none;
   color: black;
   letter-spacing: 1px;
   margin-inline: 10px;
-  font-family: "Playfair Display", serif;
 }
 
 #paper h2 {
@@ -257,7 +258,6 @@ hr {
   text-align: justify;
   padding-bottom: 1vh;
   color: #a0a6ab;
-  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -268,17 +268,17 @@ hr {
 }
 #btn,
 a#btn {
+  
   display: inline-block;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   line-height: 20px;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 1vh 2vh;
   letter-spacing: 0.02rem;
   background: #615041;
   color: white;
-  font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   box-shadow: 0 0px 0px rgba(48, 51, 54, 0.1), 0 0px 0px rgba(0, 0, 0, 0);
 }

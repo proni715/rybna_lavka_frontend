@@ -15,7 +15,7 @@ const ProductCard = (product) => {
         dreams come true.
       </p>
       <p id="price"> {product.product.price} UAH/{product.product.units.count}{product.product.units.type}</p>
-      <a id="btn">Read More </a>
+      <a id="btn">Order</a>
       <div id="space"></div>
     </div>
   );

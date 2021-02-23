@@ -8,7 +8,6 @@ const Navbar = () => {
     removeCookie("Authorization");
   };
   return (
-    <div>
       <nav className="white" role="navigation">
         <div id="nav" className="nav-wrapper container">
           <img id="logo" src="../../logo.png" alt="Рибна Лавка" />
@@ -69,7 +68,6 @@ const Navbar = () => {
           </a>
         </div>
       </nav>
-    </div>
   );
 };
 

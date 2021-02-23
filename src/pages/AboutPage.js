@@ -7,8 +7,10 @@ export const AboutPage = () =>{
     return(
         <div className="page">
             <Navbar/>
-            <div className="page-container">
-                <h1>About Page</h1>
+            <div id="about-back" className="page-container">
+                <div>
+                    <h1>About Page</h1>
+                </div>        
             </div>
             <Footer/>
         </div>
