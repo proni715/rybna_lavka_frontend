@@ -32,7 +32,6 @@ const Navbar = () => {
               </li>
             ) : (
               <li>
-
                  <a href="/auth">УВІЙТИ</a>
               </li>
             )}

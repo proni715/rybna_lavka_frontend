@@ -1,21 +1,82 @@
-import React from "react";
-import rybka from "./rybka.jpg"
+import React, { useState } from "react";
+import axios from "axios";
+import rybka from "./rybka.jpg";
+import { getCookieFromBrowser } from "../utils/cookie";
 
 const ProductCard = (product) => {
+  const [inCart, setIn] = useState(0);
+  const token = getCookieFromBrowser("Authorization");
+  console.log(token);
+  const toSend = {
+    product: product.product.id,
+    count: 1,
+  };
+
+  const removeProductHandler = async () => {
+    await axios("https://rybna-lavka-api.herokuapp.com/baskets/remove", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}` },
+      data: toSend,
+    })
+      .then((res) => {
+        if (res.data.token) {
+        } else console.log(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  const productHandler = async () => {
+    await axios("https://rybna-lavka-api.herokuapp.com/baskets", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}` },
+      data: toSend,
+    })
+      .then((res) => {
+        if (res.data.token) {
+        } else console.log(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   return (
     <div id="paper">
-      <img
-        id="poster"
-        src={ rybka }
-      />
+      <img id="poster" src={rybka} />
       <h2>Featured</h2>
       <h1>{product.product.title.toUpperCase()}</h1>
       <p>
         Down on the West Coast where the sand meets the crashing waves and your
         dreams come true.
       </p>
-      <p id="price"> {product.product.price} UAH/{product.product.units.count}{product.product.units.type}</p>
-      <a id="btn">Order</a>
+      <p id="price">
+        {" "}
+        {product.product.price} UAH/{product.product.units.count}
+        {product.product.units.type}
+      </p>
+      {inCart ? (
+        <a
+          id="btn"
+          onClick={() => {
+            setIn(false)
+            removeProductHandler()
+          }}
+        >
+          Remove
+        </a>
+      ) : (
+        <a
+          id="btn"
+          onClick={() => {
+            setIn(true)
+            productHandler()
+          }}
+        >
+          To cart
+        </a>
+      )}
       <div id="space"></div>
     </div>
   );
