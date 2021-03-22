@@ -6,6 +6,9 @@ import { ContactsPage } from "./pages/ContactsPage";
 import { MainPage } from "./pages/MainPage.jsx";
 import { RegisterPage } from "./pages/RegisterPage";
 import { StorePage } from "./pages/StorePage";
+import  ProfilePage  from "./pages/ProfilePage";
+import CartPage  from "./pages/CartPage";
+
 
 
 export const useRoutes = (isAuthenticated) => {
@@ -16,6 +19,13 @@ export const useRoutes = (isAuthenticated) => {
                 <MainPage/>
             </Route>
             
+            <Route path="/me" exact>
+                <ProfilePage/>
+            </Route>
+
+            <Route path="/cart" exact>
+                <CartPage/>
+            </Route>
 
             <Route path="/about" exact>
                 <AboutPage/>
@@ -41,6 +51,14 @@ export const useRoutes = (isAuthenticated) => {
 
             <Route path="/store" exact>
                 <StorePage/>
+            </Route>
+
+            <Route path="/cart" exact>
+                <CartPage/>
+            </Route>
+            
+            <Route path="/me" exact>
+                <ProfilePage/>
             </Route>
 
             <Route path="/auth" exact>

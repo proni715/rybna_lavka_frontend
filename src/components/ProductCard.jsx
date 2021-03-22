@@ -6,7 +6,6 @@ import { getCookieFromBrowser } from "../utils/cookie";
 const ProductCard = (product) => {
   const [inCart, setIn] = useState(0);
   const token = getCookieFromBrowser("Authorization");
-  console.log(token);
   const toSend = {
     product: product.product.id,
     count: 1,
@@ -46,38 +45,48 @@ const ProductCard = (product) => {
     <div id="paper">
       <img id="poster" src={rybka} />
       <h2>Featured</h2>
-      <h1>{product.product.title.toUpperCase()}</h1>
+      <h1>
+        {product.product.title.charAt(0).toUpperCase() +
+          product.product.title.slice(1)}
+      </h1>
       <p>
         Down on the West Coast where the sand meets the crashing waves and your
         dreams come true.
       </p>
-      <p id="price">
-        {" "}
-        {product.product.price} UAH/{product.product.units.count}
-        {product.product.units.type}
-      </p>
-      {inCart ? (
-        <a
-          id="btn"
-          onClick={() => {
-            setIn(false)
-            removeProductHandler()
-          }}
-        >
-          Remove
-        </a>
-      ) : (
-        <a
-          id="btn"
-          onClick={() => {
-            setIn(true)
-            productHandler()
-          }}
-        >
-          To cart
-        </a>
-      )}
-      <div id="space"></div>
+      <div className="action-block">
+        {product.product.discount !== 0 ? (
+          <p id="discount-price">
+            <p className='old-price'>{product.product.price} UAH</p>{product.product.discountPrice} UAH/{product.product.units.count} 
+            {product.product.units.type}
+          </p>
+        ) : (
+          <p id="price">
+            {product.product.price} UAH/{product.product.units.count}
+            {product.product.units.type}
+          </p>
+        )}
+        {inCart ? (
+          <a
+            id="btn"
+            onClick={() => {
+              setIn(false);
+              removeProductHandler();
+            }}
+          >
+            Remove
+          </a>
+        ) : (
+          <a
+            id="btn"
+            onClick={() => {
+              setIn(true);
+              productHandler();
+            }}
+          >
+            To cart
+          </a>
+        )}
+      </div>
     </div>
   );
 };
