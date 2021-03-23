@@ -71,22 +71,6 @@ div p {
   background-color: #615041;
 }
 
-@media only screen and (max-width: 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
 .icon-block {
   padding: 0 15px;
 }
@@ -225,16 +209,6 @@ form .form {
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
-  #login-form {
-    border-radius: 0px;
-  }
-
-  #register-form {
-    border-radius: 0px;
-  }
-}
-
 .action-block {
   display: flex;
   justify-content: space-between;
@@ -286,7 +260,6 @@ form .form {
 #cart-paper {
   margin: 2vh 0;
   width: 100vw;
-  max-height: 25vh;
   border-radius: 15px;
   border: 10px solid white;
   box-shadow: 0 15px 35px rgba(50, 50, 90, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
@@ -296,6 +269,7 @@ form .form {
   display: flex;
   flex-direction: row;
 }
+
 #cart-poster {
   width: auto;
   max-width: 25vw;
@@ -309,10 +283,10 @@ form .form {
 }
 
 #inner-cart-action {
-  width: 50%;
-  height: auto;
+  /* width: 50%; */
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-self: flex-end;
   align-items: flex-end;
 }
@@ -435,7 +409,7 @@ a#btn {
   text-decoration: none;
   line-height: 20px;
   border-radius: 6px;
-  padding: 1vh 2vh;
+  padding: 1rem 1rem;
   letter-spacing: 0.02rem;
   background: #615041;
   color: white;
@@ -478,15 +452,14 @@ a#btn:active {
 }
 .about-right-paper {
   background: white;
-  margin-left: 50%;
-  width: 50%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
 }
 .about-left-paper {
   background: white;
-  width: 50%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -499,4 +472,39 @@ a#btn:active {
 .about-right-title{
   display: flex;
   flex-direction: row;
+}
+
+.about-left-paper i, .about-right-paper i {
+  font-size: 10rem;
+  align-self: center;
+}
+.space{
+  height: 30vh;
+}
+
+@media only screen and (max-width: 992px) {
+  #cart-paper{
+    max-height: 100vh;
+  }
+
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+
+  #login-form {
+    border-radius: 0px;
+  }
+
+  #register-form {
+    border-radius: 0px;
+  }
+
+  .about-left-paper, .about-right-paper{
+    flex-direction: column;
+  }
 }

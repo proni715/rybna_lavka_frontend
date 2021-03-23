@@ -41,14 +41,14 @@ class ProductListInCart extends Component {
           ))}
 
           <div className="total-cart-block">
-            <h2>Your offer: {totalPrice} UAH</h2>
+            <h2>Your order: {totalPrice} UAH</h2>
             <div className="inner-cart-block">
               <div>
                 <p>Here will be price</p>
                 <p>Here will be price with discount</p>
                 <p>{totalPrice}</p>
               </div>
-              <a id="btn">Offer</a>
+              <a id="btn">Order</a>
             </div>
           </div>
         </div>

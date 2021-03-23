@@ -13,12 +13,27 @@ const ProductInCartCard = (product) => {
 
   return (
     <div id="cart-paper">
-      <div>
-        <img id="cart-poster" src={rybka} />
-      </div>
+      <img id="cart-poster" src={rybka} />
+
       <div className="cart-action">
         <h1>{product.product.product.title}</h1>
         <div id="inner-cart-action">
+          <div>
+            {product.product.product.discount !== 0 ? (
+              <p id="discount-price">
+                <p className="old-price">{product.product.product.price} UAH</p>
+                {product.product.product.discountPrice} UAH/
+                {product.product.product.units.count}
+                {product.product.product.units.type}
+              </p>
+            ) : (
+              <p id="price">
+                {product.product.product.price} UAH/
+                {product.product.product.units.count}
+                {product.product.product.units.type}
+              </p>
+            )}
+          </div>
           <div id="cart-action-price">
             <a className="btn">
               <i className="material-icons">arrow_upward</i>
@@ -29,20 +44,6 @@ const ProductInCartCard = (product) => {
             </a>
             <a id="btn">Remove</a>
           </div>
-          {product.product.product.discount !== 0 ? (
-            <p id="discount-price">
-              <p className="old-price">{product.product.product.price} UAH</p>
-              {product.product.product.discountPrice} UAH/
-              {product.product.product.units.count}
-              {product.product.product.units.type}
-            </p>
-          ) : (
-            <p id="price">
-              {product.product.product.price} UAH/
-              {product.product.product.units.count}
-              {product.product.product.units.type}
-            </p>
-          )}
         </div>
       </div>
     </div>
